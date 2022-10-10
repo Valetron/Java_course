@@ -42,8 +42,24 @@ public class Vector3D extends Line
 	
 	public double angle(Vector3D vector)
 	{
-		double scl = scalar(vector);
-		double res = scl / (length() * vector.length());
+		double res;
+		
+		try
+		{
+			double scl = scalar(vector);
+			double delim = (length() * vector.length());
+			
+			if (0 == delim)
+				throw new Exception("Devision by zero");
+			
+			res = scl / delim;
+		}
+		catch (Exception e) 
+		{
+			System.out.println(e.getMessage());
+			res = 0;
+		}
+		
 		
 		return res;
 	}

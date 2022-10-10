@@ -71,5 +71,8 @@ public class Main
 			System.out.print(diff[i] + ", ");
 		System.out.println("]");
 		
+		// ----- task 2 -----
+		ATM atm = new ATM();
+		atm.enterPIN();
 	 }
 }

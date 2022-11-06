@@ -1,5 +1,3 @@
-package task1;
-
 import java.util.Random;
 
 public class Vector3D extends Line
